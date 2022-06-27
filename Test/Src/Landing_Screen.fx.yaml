@@ -1,0 +1,147 @@
+Landing_Screen As screen:
+    Fill: =RGBA(255,255,255,1)
+    Height: =Max(App.Height, App.DesignHeight)
+    LoadingSpinnerColor: =RGBA(0, 51, 102, 1)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Rectangle3 As rectangle:
+        BorderColor: =RGBA(0, 0, 255, 1)
+        DisabledFill: =Rectangle3.Fill
+        Fill: =RGBA(101,128,187,1)
+        Height: =118.85714285714289
+        HoverFill: =Rectangle3.Fill
+        PressedFill: =Rectangle3.Fill
+        Width: =640
+        ZIndex: =1
+
+    TextBox1_5 As label:
+        Align: =Left
+        Color: =RGBA(47,41,43,1)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        Font: =Font.Lato
+        FontWeight: =Normal
+        Height: =192
+        HoverBorderColor: =TextBox1_5.BorderColor
+        HoverColor: =TextBox1_5.Color
+        HoverFill: =TextBox1_5.Fill
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =TextBox1_5.BorderColor
+        PressedColor: =TextBox1_5.Color
+        PressedFill: =TextBox1_5.Fill
+        Size: =44
+        Text: =LookUp(WelcomeNote,ID=1).WelcomeTitle
+        VerticalAlign: =VerticalAlign.Top
+        Width: =581.4285714285714
+        X: =30
+        Y: =168
+        ZIndex: =3
+
+    TextBox1_6 As label:
+        Align: =Left
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(47,41,43,1)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        Font: =Font.Lato
+        Height: =134.28571428571433
+        HoverBorderColor: =TextBox1_6.BorderColor
+        HoverColor: =TextBox1_6.Color
+        HoverFill: =TextBox1_6.Fill
+        LineHeight: =1.3
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =TextBox1_6.BorderColor
+        PressedColor: =TextBox1_6.Color
+        PressedFill: =TextBox1_6.Fill
+        Size: =24
+        Text: =LookUp(WelcomeNote,ID=1).WelcomeMessage
+        VerticalAlign: =VerticalAlign.Top
+        Width: =581
+        X: =30
+        Y: =360.2857142857142
+        ZIndex: =8
+
+    Button3 As button:
+        BorderColor: =ColorFade(Button3.Fill, -15%)
+        Color: =RGBA(255,255,255,1)
+        DisabledBorderColor: =ColorFade(Button3.BorderColor, 70%)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+        Fill: =RGBA(245,166,38,1)
+        Font: =Font.Lato
+        FontWeight: =Lighter
+        Height: =99
+        HoverBorderColor: =ColorFade(Button3.BorderColor, 20%)
+        HoverColor: =Button3.Color
+        HoverFill: =ColorFade(Button3.Fill, 20%)
+        OnSelect: |-
+            =Navigate(Question_1, ScreenTransition.Fade,{error1_v:false})
+        PressedBorderColor: =Button3.BorderColor
+        PressedColor: =Button3.Color
+        PressedFill: =Button3.Fill
+        RadiusBottomLeft: =80
+        RadiusBottomRight: =80
+        RadiusTopLeft: =80
+        RadiusTopRight: =80
+        Size: =25
+        Text: ="Next"
+        Width: =270
+        X: =340.42857142857133
+        Y: =1005
+        ZIndex: =10
+
+    Button1_1 As button:
+        BorderColor: =RGBA(226, 226, 226, 1)
+        BorderStyle: =Solid
+        BorderThickness: =3
+        Color: =RGBA(157, 158, 159, 1)
+        DisabledBorderColor: =ColorFade(Button1_1.BorderColor, 70%)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.Lato
+        FontWeight: =Lighter
+        Height: =99
+        HoverBorderColor: =ColorFade(Button1_1.BorderColor, 20%)
+        HoverColor: =Button1_1.Color
+        HoverFill: =ColorFade(Button1_1.Fill, 20%)
+        OnSelect: =Navigate(Home_Screen, ScreenTransition.Fade)
+        PressedBorderColor: =Button1_1.BorderColor
+        PressedColor: =Button1_1.Color
+        PressedFill: =Button1_1.Fill
+        RadiusBottomLeft: =80
+        RadiusBottomRight: =80
+        RadiusTopLeft: =80
+        RadiusTopRight: =80
+        Size: =25
+        Text: ="Back"
+        Width: =270
+        X: =30.428571428571324
+        Y: =1005
+        ZIndex: =11
+
+    TextBox1_4 As label:
+        Align: =Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(238, 247, 251, 0.8)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        Font: =Font.'Lato Light'
+        FontWeight: =Lighter
+        Height: =70
+        HoverBorderColor: =TextBox1_4.BorderColor
+        HoverColor: =TextBox1_4.Color
+        HoverFill: =TextBox1_4.Fill
+        PressedBorderColor: =TextBox1_4.BorderColor
+        PressedColor: =TextBox1_4.Color
+        PressedFill: =TextBox1_4.Fill
+        Size: =29
+        Text: ="Fabrikam Connect"
+        Width: =581
+        X: =30
+        Y: =24.428571428571427
+        ZIndex: =12
+

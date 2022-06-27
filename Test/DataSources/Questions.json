@@ -1,0 +1,17 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-04-18T17:05:32.6330000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {},
+    "DatasetName": "b!MzEncQoDbUKQUPRKrW7lRHdWgjC787tHgoVIH20L2KAd0sQMgHMDS4jjuZadjHSK.01L7PNVHEWGK6BIA6ASNFY32OGU5ATVR6A",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Questions",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

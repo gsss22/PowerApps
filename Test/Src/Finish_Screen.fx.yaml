@@ -1,0 +1,134 @@
+Finish_Screen As screen:
+    Fill: =RGBA(255,255,255,1)
+    Height: =Max(App.Height, App.DesignHeight)
+    LoadingSpinnerColor: =RGBA(0, 51, 102, 1)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Rectangle5 As rectangle:
+        BorderColor: =RGBA(0, 0, 255, 1)
+        DisabledFill: =Rectangle5.Fill
+        Fill: =RGBA(11,160,19,1)
+        Height: =1136
+        HoverFill: =Rectangle5.Fill
+        PressedFill: =Rectangle5.Fill
+        Width: =640
+        ZIndex: =1
+
+    TextBox1_11 As label:
+        Align: =Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        Font: =Font.Lato
+        Height: =114.14285714285802
+        HoverBorderColor: =TextBox1_11.BorderColor
+        HoverColor: =TextBox1_11.Color
+        HoverFill: =TextBox1_11.Fill
+        PressedBorderColor: =TextBox1_11.BorderColor
+        PressedColor: =TextBox1_11.Color
+        PressedFill: =TextBox1_11.Fill
+        Size: =57
+        Text: ="Done"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =581.4285714285714
+        X: =30
+        Y: =532.7142857142878
+        ZIndex: =3
+
+    TextBox1_12 As label:
+        Align: =Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        Font: =Font.Lato
+        Height: =146.00000000000125
+        HoverBorderColor: =TextBox1_12.BorderColor
+        HoverColor: =TextBox1_12.Color
+        HoverFill: =TextBox1_12.Fill
+        PressedBorderColor: =TextBox1_12.BorderColor
+        PressedColor: =TextBox1_12.Color
+        PressedFill: =TextBox1_12.Fill
+        Size: =30
+        Text: ="Look for next month's survey in your inbox."
+        Width: =514.5
+        X: =62.75
+        Y: =632.5714285714272
+        ZIndex: =4
+
+    Button1_3 As button:
+        BorderColor: =RGBA(245, 246, 247, 1)
+        BorderStyle: =Solid
+        Color: =RGBA(255,255,255,1)
+        DisabledBorderColor: =ColorFade(Button1_3.BorderColor, 70%)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.Lato
+        FontWeight: =Lighter
+        Height: =99
+        HoverBorderColor: =ColorFade(Button1_3.BorderColor, 20%)
+        HoverColor: =Button1_3.Color
+        HoverFill: =ColorFade(Button1_3.Fill, 20%)
+        OnSelect: |-
+            =Launch("https://web.powerapps.com")
+        PressedBorderColor: =Button1_3.BorderColor
+        PressedColor: =Button1_3.Color
+        PressedFill: =Button1_3.Fill
+        RadiusBottomLeft: =80
+        RadiusBottomRight: =80
+        RadiusTopLeft: =80
+        RadiusTopRight: =80
+        Size: =25
+        Text: ="Explore other apps"
+        Width: =472
+        X: =84
+        Y: =1005
+        ZIndex: =5
+
+    Circle2_1 As circle:
+        BorderColor: =RGBA(0, 0, 255, 1)
+        DisabledFill: =Circle2_1.Fill
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =90
+        HoverFill: =Circle2_1.Fill
+        PressedFill: =Circle2_1.Fill
+        Width: =90
+        X: =395
+        Y: =274
+        ZIndex: =6
+
+    TextBox1_10 As label:
+        Align: =Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(238, 247, 251, 0.8)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        Font: =Font.'Lato Light'
+        FontWeight: =Lighter
+        Height: =70
+        HoverBorderColor: =TextBox1_10.BorderColor
+        HoverColor: =TextBox1_10.Color
+        HoverFill: =TextBox1_10.Fill
+        PressedBorderColor: =TextBox1_10.BorderColor
+        PressedColor: =TextBox1_10.Color
+        PressedFill: =TextBox1_10.Fill
+        Size: =29
+        Text: ="Fabrikam Connect"
+        Width: =581
+        X: =30
+        Y: =24.428571428571427
+        ZIndex: =10
+
+    Image1 As image:
+        ApplyEXIFOrientation: =false
+        BorderColor: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(159, 167, 165, 1)
+        DisabledFill: =RGBA(193, 193, 193, 0.95)
+        Height: =133
+        HoverBorderColor: =ColorFade(Image1.BorderColor, 20%)
+        HoverFill: =ColorFade(Image1.Fill, 20%)
+        Image: =check_in_circle_white
+        PressedBorderColor: =ColorFade(Image1.BorderColor, -20%)
+        PressedFill: =ColorFade(Image1.Fill, -20%)
+        X: =270
+        Y: =373.0000000000001
+        ZIndex: =11
+

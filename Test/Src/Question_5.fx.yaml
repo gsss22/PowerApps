@@ -1,0 +1,209 @@
+Question_5 As screen:
+    Fill: =RGBA(255,255,255,1)
+    Height: =Max(App.Height, App.DesignHeight)
+    LoadingSpinnerColor: =RGBA(0, 51, 102, 1)
+    OnVisible: =ClearCollect(Listcollect, ListBox1.SelectedItemsText.'data-ADB4D7A662F548B49FAC2B986E348A1BOptionText')
+    Width: =Max(App.Width, App.DesignWidth)
+
+    TextBox1_21 As label:
+        Align: =Left
+        Color: =RGBA(47,41,43,1)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        Font: =Font.Lato
+        FontWeight: =Lighter
+        Height: =86.714285714286
+        HoverBorderColor: =TextBox1_21.BorderColor
+        HoverColor: =TextBox1_21.Color
+        HoverFill: =TextBox1_21.Fill
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =TextBox1_21.BorderColor
+        PressedColor: =TextBox1_21.Color
+        PressedFill: =TextBox1_21.Fill
+        Size: =44
+        Text: =LookUp(Questions,QuestionId="5").QuestionText
+        VerticalAlign: =VerticalAlign.Top
+        Width: =581.4285714285714
+        X: =30
+        Y: =168
+        ZIndex: =3
+
+    Button3_5 As button:
+        BorderColor: =ColorFade(Button3_5.Fill, -15%)
+        Color: =RGBA(255,255,255,1)
+        DisabledBorderColor: =ColorFade(Button3_5.BorderColor, 70%)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+        Fill: =RGBA(245,166,38,1)
+        Font: =Font.Lato
+        FontWeight: =Lighter
+        Height: =99
+        HoverBorderColor: =ColorFade(Button3_5.BorderColor, 20%)
+        HoverColor: =Button3_5.Color
+        HoverFill: =ColorFade(Button3_5.Fill, 20%)
+        OnSelect: |-
+            =If(!IsBlank(LookUp(Responses,Username=User().FullName,Responses)),UpdateIf(Responses,Username=User().FullName,{ResponseId:ResponseId, Answer1:Radio1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BOptionText',Answer2:Replace(Concat(Listcollect,OptionText & ", "),Len(Concat(Listcollect,OptionText & ", "))-1,1," "),Answer3:Text(Slider1.Value), Answer4:If(Radio1_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BOptionText'="No","No," & TextInput1.Text,Radio1_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BOptionText'),Answer5:TextInput1_1.Text,Username:User().FullName}),
+            UpdateContext({NewSurvey:Patch(Responses,Defaults(Responses), {ResponseId:Text(CountRows(Responses)+1), Answer1:Radio1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BOptionText',Answer2:Replace(Concat(Listcollect,OptionText & ", "),Len(Concat(Listcollect,OptionText & ", "))-1,1," "),Answer3:Text(Slider1.Value), Answer4:If(Radio1_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BOptionText'="No","No," & TextInput1.Text,Radio1_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BOptionText'),Answer5:TextInput1_1.Text,Username:User().FullName})}));Navigate(Finish_Screen,ScreenTransition.Fade)
+        PressedBorderColor: =Button3_5.BorderColor
+        PressedColor: =Button3_5.Color
+        PressedFill: =Button3_5.Fill
+        RadiusBottomLeft: =80
+        RadiusBottomRight: =80
+        RadiusTopLeft: =80
+        RadiusTopRight: =80
+        Size: =25
+        Text: ="Next"
+        Width: =270
+        X: =340.42857142857133
+        Y: =1005
+        ZIndex: =4
+
+    Button1_7 As button:
+        BorderColor: =RGBA(226, 226, 226, 1)
+        BorderStyle: =Solid
+        BorderThickness: =3
+        Color: =RGBA(157, 158, 159, 1)
+        DisabledBorderColor: =ColorFade(Button1_7.BorderColor, 70%)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.Lato
+        FontWeight: =Lighter
+        Height: =99
+        HoverBorderColor: =ColorFade(Button1_7.BorderColor, 20%)
+        HoverColor: =Button1_7.Color
+        HoverFill: =ColorFade(Button1_7.Fill, 20%)
+        OnSelect: |-
+            =Navigate(Question_4, ScreenTransition.Fade,{error_v:false,error4_v:false})
+        PressedBorderColor: =Button1_7.BorderColor
+        PressedColor: =Button1_7.Color
+        PressedFill: =Button1_7.Fill
+        RadiusBottomLeft: =80
+        RadiusBottomRight: =80
+        RadiusTopLeft: =80
+        RadiusTopRight: =80
+        Size: =25
+        Text: ="Back"
+        Width: =270
+        X: =30.428571428571324
+        Y: =1005
+        ZIndex: =5
+
+    TextInput1_1 As text:
+        BorderColor: =RGBA(179, 179, 179, 1)
+        BorderStyle: =Solid
+        Color: =RGBA(47, 41, 43, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(159, 167, 165, 1)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =3
+        Font: =Font.Lato
+        Height: =697
+        HintText: ="Type here"
+        HoverBorderColor: =RGBA(101, 128, 187, 1)
+        HoverColor: =RGBA(47, 41, 43, 1)
+        HoverFill: =TextInput1_1.Fill
+        Mode: =MultiLine
+        PressedBorderColor: =TextInput1_1.HoverBorderColor
+        PressedColor: =TextInput1_1.Color
+        PressedFill: =TextInput1_1.Fill
+        Reset: =
+        Size: =21
+        Width: =580
+        X: =30
+        Y: =268
+        ZIndex: =6
+
+    Group3 As group:
+        Height: =20.000000000000014
+        Width: =640
+        X: =0
+        Y: =117.571428571429
+        ZIndex: =7
+
+        Rectangle6_7 As rectangle:
+            BorderColor: =RGBA(0, 0, 255, 1)
+            DisabledFill: =Rectangle6_7.Fill
+            Fill: =RGBA(196,227,201,1)
+            Height: =20
+            HoverFill: =Rectangle6_7.Fill
+            PressedFill: =Rectangle6_7.Fill
+            Width: =640
+            Y: =117.57142857142857
+            ZIndex: =8
+
+        Rectangle6_10 As rectangle:
+            BorderColor: =RGBA(0, 0, 255, 1)
+            DisabledFill: =Rectangle6_10.Fill
+            Fill: =RGBA(22,160,72,1)
+            Height: =20
+            HoverFill: =Rectangle6_10.Fill
+            PressedFill: =Rectangle6_10.Fill
+            Width: =384
+            Y: =117.57142857142857
+            ZIndex: =9
+
+        Rectangle6_8 As rectangle:
+            BorderColor: =RGBA(0, 0, 255, 1)
+            DisabledFill: =Rectangle6_8.Fill
+            Fill: =RGBA(22,160,72,1)
+            Height: =20
+            HoverFill: =Rectangle6_8.Fill
+            PressedFill: =Rectangle6_8.Fill
+            Width: =512
+            Y: =117.57142857142857
+            ZIndex: =10
+
+    Rectangle3_5 As rectangle:
+        BorderColor: =RGBA(0, 0, 255, 1)
+        DisabledFill: =Rectangle3_5.Fill
+        Fill: =RGBA(101,128,187,1)
+        Height: =118.857142857143
+        HoverFill: =Rectangle3_5.Fill
+        PressedFill: =Rectangle3_5.Fill
+        Width: =640
+        ZIndex: =11
+
+    TextBox1_20 As label:
+        Align: =Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(238, 247, 251, 0.8)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        Font: =Font.'Lato Light'
+        FontWeight: =Lighter
+        Height: =70
+        HoverBorderColor: =TextBox1_20.BorderColor
+        HoverColor: =TextBox1_20.Color
+        HoverFill: =TextBox1_20.Fill
+        PressedBorderColor: =TextBox1_20.BorderColor
+        PressedColor: =TextBox1_20.Color
+        PressedFill: =TextBox1_20.Fill
+        Size: =29
+        Text: ="Question 5/5"
+        Width: =581
+        X: =30
+        Y: =24.428571428571427
+        ZIndex: =12
+
+    TextBox1 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(47,41,43,1)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        Height: =241
+        HoverBorderColor: =TextBox1.BorderColor
+        HoverColor: =TextBox1.Color
+        HoverFill: =TextBox1.Fill
+        PressedBorderColor: =TextBox1.BorderColor
+        PressedColor: =TextBox1.Color
+        PressedFill: =TextBox1.Fill
+        Size: =21
+        Text: =
+        Width: =560
+        X: =50
+        Y: =348
+        ZIndex: =13
+

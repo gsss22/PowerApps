@@ -1,0 +1,12 @@
+{
+  "Content": "Image",
+  "FileName": "Basel_Crop.svg",
+  "IsSampleData": true,
+  "IsWritable": false,
+  "Name": "Basel_Crop",
+  "Path": "Assets\\Images\\Basel_Crop.svg",
+  "ResourceKind": "Uri",
+  "RootPath": "ms-appx:///ctrllib/icon/images/Basel_Crop.svg",
+  "Schema": "i",
+  "Type": "ResourceInfo"
+}
